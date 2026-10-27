@@ -1,0 +1,9 @@
+gorev,protokol,dogruluk,secilen
+ALS-Saglikli,pencere_rastgele,0.9365056196175741,"C=10,g=2;C=10,g=2;C=10,g=2;C=10,g=2;C=10,g=2"
+ALS-Saglikli,hasta_grup,0.8416289592760181,"C=100,g=0.02;C=400,g=0.02;C=10,g=0.02;C=400,g=0.02;C=100,g=0.02"
+ALS-Miyopati,pencere_rastgele,0.9559578107183581,"C=10,g=2;C=10,g=2;C=10,g=2;C=10,g=2;C=10,g=2"
+ALS-Miyopati,hasta_grup,0.9025085518814139,"C=0.1,g=0.02;C=1,g=0.02;C=0.1,g=0.02;C=1,g=0.02;C=0.1,g=0.222"
+Miyopati-Saglikli,pencere_rastgele,0.9315594974131559,"C=10,g=2;C=10,g=2;C=10,g=2;C=10,g=2;C=10,g=2"
+Miyopati-Saglikli,hasta_grup,0.7745750184774575,"C=10,g=0.02;C=10,g=0.02;C=10,g=0.02;C=10,g=0.02;C=100,g=0.02"
+3-sinif,pencere_rastgele,0.898797983714618,"C=10,g=2;C=10,g=2;C=10,g=2;C=10,g=2;C=10,g=2"
+3-sinif,hasta_grup,0.7347809228383094,"C=10,g=0.02;C=100,g=0.02;C=100,g=0.02;C=100,g=0.02;C=100,g=0.02"

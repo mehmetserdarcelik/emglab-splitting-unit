@@ -1,0 +1,182 @@
+﻿no;dosya;yil;ilk_yazar;baslik;veri;gorev;ornek_birimi;bolme_tarifi;bolme_kodu;pstar_turu;kanit_alinti;sayfa_bolum;dogruluk;emin_misiniz;not
+1;01_2022_Hassan.pdf;2022;Kanza Hassan;ALSNet: A Dilated 1-D CNN for Identifying ALS from Raw EMG Signal;"EMGLab (alt küme: N2001, 151 ALS + 151 sağlıklı kayıt; biceps brachii ve vastus medialis)";ALS–sağlıklı;segment;"302 kaydın her biri 11 adet 1 sn segmente ayrılıyor (3322 segment). Eğitim/doğrulama/test oranı 80:20:25, sayıları 2125/532/665 olarak veriliyor; kümelerin farklı kişilerden oluştuğu iddia ediliyor.";P*;celiski;"Each of these 302 signals was then segmented into
+11 segments where each of the segments had a time duration
+of 1s. So, the size of the dataset used in this experiment is-
+302 × 11 = 3322. An arbitrary segment from each of the
+Normal and ALS EMG signals is shown in Fig. 2.
+The dataset was splitted into train, validation and test set
+by a ratio of 80:20:25. The training, validation and test sets
+were made up of data from different subjects so that the pro-
+posed model can be trained and evaluated properly. Summary
+of the datset is shown in Table 1.
+Table 1. Summary of the dataset used in the experiment
+Train Validation Test
+No. of segments 2125 532 665";"s. 1183, Bölüm 4.1 Dataset ve Tablo 1; doğruluk: s. 1184, Bölüm 5.2 ve Tablo 3";97.74;3;"Her kayıt 11 segment verdiği halde testte 665 ve doğrulamada 532 segment var; ikisi de 11'in katı değil. Bildirilen sayılar bütün kayıtların/kişilerin tek kümede tutulmasıyla çelişiyor."
+2;02_2026_Chowdhury.txt (yalnizca txt);2026;Sandipa Chowdhury;ALSGate: An Efficient Gated Mixture‐of‐Experts Model for Reliable ALS Detection Using EMG Signals;"EMGLab (alt küme: N2001, 151 ALS + 151 sağlıklı kayıt; 8 ALS ve 10 sağlıklı kişi)";ALS–sağlıklı;pencere;302 kayıt, kayıt başına 11 örtüşmesiz 1 sn pencereye bölünüyor (3322 örnek). Eğitim/doğrulama/test için %70/%15/%15 kişi-ayrık, tabakalı ayrım iddia ediliyor.;P*;dogrulanamaz;Each signal was segmented into eleven non-overlapping 1 s windows, yielding 302 × 11 = 3322 samples. Subject-disjoint training, validation and test splits were used in a 70%, 15% and 15% ratio, respectively.;"Bölüm 1 son paragraf; Bölüm 3.1–3.3; Ek B.3; doğruluk: Bölüm 4, Tablo 1 ve 3";99.05;3;"Küme başına kişi/kayıt/pencere sayıları ve kişilerin kümelere atanması verilmediğinden kişi ayrımı doğrulanamıyor; yalnız oranlar sayısal çelişki kanıtı değil. En yüksek sonuç Gated MoE + focal loss; %99.05 metinde dengeli doğruluk, tabloda ACC olarak sunuluyor. Sağlanan TXT, yöntem mimarisi ve formülleri kısaltılmış yayıncı metni."
+3;03_2022_Samanta.pdf;2022;Kaniska Samanta;Neuromuscular disease detection based on feature extraction from time–frequency images of EMG signals employing robust h;"EMGLab (alt küme: N2001, biceps brachii; 300 sağlıklı + 106 miyopati + 85 ALS kayıt)";"ALS–sağlıklı (T-II; en yüksek doğruluk)";çerçeve;"491 kayıt 64 eşit çerçeveye ayrılıyor; kayıt başına ortadaki 25 çerçeve seçiliyor. Sınıflar 2125'er çerçeveye dengelenip 10 katlı çapraz doğrulama uygulanıyor; kayıt/kişi gruplaması belirtilmiyor.";S;;"the EMG signals were segmented into 64 equal
+time frame, and 25 frames (from 31st to 55th segment)
+from the middle steady portion of the signal
+[...]
+As mentioned
+earlier, in the present work, there are 2125 ALS signals,
+2650 M signals, and 7500 H signals. So, to avoid the prob-
+lem of class unbalance, 2125 signals per class is chosen in
+this study to evaluate the performance of the classifiers.
+Here, we performed 10-fold cross validation, and finally
+the mean performance parameters are reported in terms
+of percentage (%) with standard deviation in Table 5.";"s. 1256–1258, Bölüm 4.1–4.2; doğruluk: s. 1259, Tablo 5";99.5;3;"Yönerge gereği en yüksek değeri veren T-II (ALS–sağlıklı), SVM-RBF deneyi seçildi: Tablo 5'te %99.5 ± 0.5. Tablo 6 aynı görev için %98.75 veriyor; anlatıda en yüksek doğruluğun T-III'te olduğu söyleniyor. Bu raporlama tutarsızlığı bölme kodunu değiştirmiyor."
+4;04_2012_Fattah.pdf;2012;Shaikh Anowarul Fattah;Evaluation of Different Time and Frequency Domain Features of Motor Neuron and Musculoskeletal Diseases;"EMGLab (alt küme: Nikolic 2001; biceps brachii; 6 sağlıklı + 6 ALS + 6 miyopati kişiden 18 kayıt)";ALS–sağlıklı (eşit en yüksek: ALS–miyopati);kayıt;"Her 11.184 sn kayıt 64 çerçeveye ayrılıyor; seçilen 25 çerçevenin özellikleri ortalanarak kayıt başına tek özellik vektörü oluşturuluyor. LOOCV'de bir dataset/kayıt test, kalanları eğitim olarak kullanılıyor.";R;;"For all the cases of normal persons, the 
+ALS patients and myopathic patients, average results obtained 
+from 25 frames of every datasets are considered to construct 
+the feature vector.
+[...]
+The most widely 
+used leave -one-out cross validation algorithm is utilized for 
+the testing purpose. In this case, among several datasets only 
+one dataset is taken away at a time for the purpose of testing 
+against the remaining all datasets. Excluding the test dataset, 
+remaining datasets are used for the training of the classifier.";"s. 36–37, Bölüm 3 Experimental Design; s. 38, Bölüm 4; doğruluk: s. 39, Tablo 1 ve 3";100;3;"Çerçeveler sınıflandırmadan önce kayıt içinde ortalandığı için birim çerçeve değil kayıttır. 18 dataset/18 kişi anlatımı olsa da bölme açıkça bir dataset dışarıda bırakılarak tanımlanıyor; kişiye göre gruplama belirtilmiyor. En yüksek %100, ALS–sağlıklı ve ALS–miyopati görevlerinde spektral tepe/otokorelasyon özellikleriyle raporlanıyor."
+5;05_2023_Rahman.pdf;2023;Md. Toufiqur Rahman;EMG Signal Classification for Neuromuscular Disorders with Attention-Enhanced CNN;"EMGLab (alt küme: N2001; Normal, Myopathy ve ALS; kullanılan kişi sayıları belirtilmiyor)";3 sınıf (ALS–miyopati–sağlıklı);pencere;"Subject-independent mimari iddiası var. 23437 noktalı pencereler için eğitim/doğrulama/test sayıları 3215/682/539 veriliyor; ilk eğitim kümesi 294 kayıt olarak tanımlanıyor. Kişilerin kümelere nasıl atandığı açıklanmıyor.";P*;dogrulanamaz;"In this study, we propose SpectroEMG-Net, a subject-
+independent deep-learning architecture capable of identi fying
+ALS and Myopathy among three classes ( Myopathy, Normal,
+and ALS) utilizing the spectrogram features from raw EMG
+data.
+[...]
+The original training data consisted of 294
+samples, each containing 262124 data points, with a shape
+of (262124,1). To facilitate further analysis, we applied a
+windowing technique, segmenting the data into windows, eac h
+comprising 23437 data points. As a result, the initial train ing
+dataset was transformed into a new shape (3215, 23437, 1),
+while the initial validation dataset comprised 682 samples
+with the same windowed shape, (23437, 1). The initial test
+dataset also follows this windowing process, yielding a sha pe
+of (539, 23437, 1).";"Bölüm I Introduction; Bölüm II Dataset Preprocessing; doğruluk: Bölüm V ve Tablo II";92.02;1;"Kişi-ayrık iddiayı destekleyen kişi sayıları/kimlikleri veya atama yöntemi yok. P* alt türü belirsiz: 294 adet 262124 noktalı kayıttan 23437 noktalı örtüşmesiz pencerelerle 3234 pencere beklenirken 3215 bildiriliyor; ancak pencere adımı/eleme işlemi açık olmadığından bunu kesin kişi ayrımı çelişkisi saymadım. Testte 539=49×11 pencere var. %92.02 Tablo II'den; anlatıda %92 (496/539)."
+6;06_2023_Afzal.pdf;2023;Faiza Afzal;Power of Cepstrum meets EMG: Detecting ALS and Myopathy;"EMGLab (alt küme: N2001; 25 kişi, 108 sağlıklı + 107 miyopati + 100 ALS kayıt olarak bildiriliyor)";3 sınıf (ALS–miyopati–sağlıklı);segment;"Kayıtlar örtüşmesiz 1 sn segmentlere ayrılıyor; MFCC/GTCC özellik matrisiyle sınıflandırıcılar değerlendiriliyor. Eğitim/test oranı, ayırma birimi ve çapraz doğrulama yöntemi belirtilmiyor.";U;;"After that EMG signals are divided 
+into non-overlapping segments of 1 sec to increase the 
+number of samples and the amount of data. The datas et now 
+contains 1188 normal records, 2671 ALS recordings, and 
+1177 recordings for myopathy patients.
+[...]
+The size of 
+the input feature matrix was 3454×54. Multiple clas sifiers, 
+including SVM, ensemble, Neural Network (NN), Kerne l, 
+quadratic discriminant, and fine tree, were trained  on the 
+same feature matrix. Among them, the KNN classifier  
+achieved the highest accuracy of 98.73%.";"Bölüm III.A–B Database/Preprocessing; Bölüm IV Results and Discussion, Tablo I–II";98.73;1;"Bölme yöntemi açıklanmadığından S/R/P ayrımı yapılamıyor. %98.73 raporlanan en yüksek KNN doğruluğu; bağımsız testte elde edilip edilmediği belirlenemiyor. Segment sayıları (1188+2671+1177=5036), 3454×54 özellik matrisiyle uyuşmuyor; ayrıca 100 ALS kaydından 2671 adet 1 sn segment üretimi açıklanmıyor."
+7;07_2022_Abdel-Maboud.pdf;2022;Nahla F. Abdel-Maboud;Comparative study of machine learning techniques based on TQWT for EMG signal classification;"EMGLab (alt küme: N2001; biceps brachii; 320 sağlıklı + 192 miyopati + 224 ALS çerçeve)";3 sınıf (ALS–miyopati–sağlıklı);çerçeve;"Sinyaller 8192 noktalı çerçevelere bölünüyor. Toplam 736 çerçeveden TQWT özellikleri çıkarılıp 10 katlı çapraz doğrulamayla sınıflandırılıyor; kişi/kayıt gruplaması belirtilmiyor.";S;;"At first, EMG signal was divided 
+into frames each of length 8192, so that we have 224 ALS 
+instances, 192 myopathic instances and 320 control 
+instances for the classification. TQWT method was utilized 
+to decompose each frame into sub-bands then statistical 
+features such as MAV, IQR, kurtosis, mode, standard 
+deviation, skewness and ratio were extracted for each sub-
+band to classify the signals. To evaluate the classifiers’ 
+performances, classification accuracy, F measure and 
+kappa statistics were measured and 10- fold cross-
+validation technique was utilized.";"s. 375, Bölüm II.A; s. 376, Bölüm III Results and Discussion ve Tablo I–II";98.64;3;En yüksek doğruluk TQWT + Random Forest ile elde ediliyor. Birim çerçeve ve değerlendirme 10 katlı çapraz doğrulama olduğundan yönergeye göre S.
+8;08_2014_Doulah.pdf;2014;Abul Doulah;Wavelet Domain Feature Extraction Scheme Based on Dominant Motor Unit Action Potential of EMG Signal for Neuromuscular D;"EMGLab (alt küme: N2001; küçük 3 sınıflı deney, 15 sağlıklı + 15 ALS + 15 miyopati kayıt; her grupta 5 kişi)";"3 sınıf (ALS–miyopati–sağlıklı; küçük veri kümesi)";MUAP (kayıt başına tek baskın MUAP);"Her kayıttan en yüksek enerjili tek baskın MUAP seçilerek özellik vektörü çıkarılıyor; küçük ve büyük veri kümeleri LOOCV ile değerlendiriliyor. Kişiye göre gruplama belirtilmiyor; seçilen deneyde 15 kişiden 45 kayıt var.";R;;"Three class small dataset: 45 recording (15 from each
+type) from 5 normal, 5 ALS, and 5 myopathy subjects.
+[...]
+Among the extracted MUAPs from a particular EMG
+recording, the MUAP with the highest energy content is se-
+lected as the dominant MUAP.
+[...]
+Classi ﬁcation performance
+is tested using leave one out cross validation technique for
+both small and large datasets considering two and three class
+problems.";"s. 157, Bölüm III.B; s. 159–160, Bölüm IV.A; s. 163, Bölüm V; doğruluk: PDF s. 161, Tablo III";100;3;"En yüksek %100 doğruluğu veren baskın MUAP yöntemiyle küçük 3 sınıflı deney seçildi (Tablo III); küçük 2 sınıflı deney de %100 (Tablo I). Her kaydı tek MUAP temsil ettiğinden bölme R. TXT'de tablo hücreleri eksik olduğu için PDF'deki Tablo I–III görselleri kontrol edildi; büyük 2 sınıflı deney %99.50."
+9;09_2026_Ahmadi.pdf;2026;Amir Masoud Ahmadi;Enhancing ALS diagnosis using EMG time series classification through integrating MiniRocket, InceptionTime, and LightGBM;"EMGLab (alt küme: Kaggle'daki işlenmiş ALS–sağlıklı verisi; 3322 sinyal penceresi)";ALS–sağlıklı;pencere;"İşlenmiş veri 2657 eğitim ve 665 test örneğinden oluşuyor; eğitimin %15'i doğrulama için ayrılıyor. Ansambl ayarında çapraz doğrulama kullanılıyor. Yazarlar değerlendirmenin kişi değil sinyal-penceresi düzeyinde olduğunu açıkça belirtiyor.";S;;"encompassed a diverse cohort of 2657 individ-
+uals for the training set and an additional 665 individuals
+for the test set.
+[...]
+This hyperparameter opti-
+mization process was carried out on the validation set,
+which was comprised of 15 percent of the training data.
+[...]
+Our evaluation
+employs signal-window based validation rather than
+patient-level validation. While this demonstrates robust
+signal classiﬁcation and our model’s ability to learn
+fundamental EMG patterns without overﬁtting to
+speciﬁc samples, clinical deployment requires valida-
+tion on completely independent patient populations to
+ensure generalizability across diverse demographics
+and disease presentations.";"s. 6216–6217, Bölüm 3.1–3.4; s. 6225, Bölüm 5.5.1; doğruluk: s. 6225, Tablo 6";98.9;3;"En yüksek test doğruluğu MiniRocket + InceptionTime + LightGBM ansamblına ait (%98.9); %99.9 ROC-AUC'dur. Bölüm 3.1'de 2657/665 örnek yanlış biçimde individuals olarak adlandırılıyor; Bölüm 5.1 ve 5.5.1 pencere düzeyindeki değerlendirmeyi açıkça kabul ettiği için P* değil S. Rastgeleleştirme ayrıntısı verilmemiş; pencere birimi ve çapraz doğrulama yönergesi esas alındı."
+10;10_2018_Hazarika.pdf;2018;Anil Hazarika;An automatic feature extraction and fusion model: application to electromyogram (EMG) signal classification;EMGLab (alt küme: 250 kayıt, 50 ALS + 50 miyopati + 150 sağlıklı) ve kendi verisi (GNRC: 60 kayıt, 12 kişi);3 sınıf (ALS–miyopati–sağlıklı);kayıt (pencerelerden türetilen çoklu görünüm öznitelikleri);"Veri rastgele eğitim/teste ayrılıyor; aynı kişinin iki kümede bulunmadığı söyleniyor. 2 katlı çapraz doğrulama ve 3 tekrar kullanılıyor; kişi/kat dağılımı ve eğitim/test sayıları verilmiyor.";P*;dogrulanamaz;"In
+classiﬁcation stage, the entire dataset is randomly partitioned
+for training and testing. We further ensure that same subject
+data is not used both for training and testing. || the best average accuracies between k-fold cross-validation,
+k being two. || In ﬁrst case, the algorithm intended for isolating the
+classes yields an accuracy up to 97.6, 96.6 and 98.8% that
+endorsed from Tables 3, 4 and 5, respectively.";"s. 175–176, §3.1; s. 178–181, §4.3–4.4; s. 182–184, §5.1 ve Tablo 5–6";98.8;1;"En yüksek sonuç, ilk füzyon ve λ2 ile üç sınıflı deneydir. 25 EMGLab ve 12 GNRC kişisi doğru sayılıyor; somut bir sayı çelişkisi yok, fakat kişi-ayrık kat kuruluşu doğrulanamıyor. Tablo 6 toplam 37 kişiyi gösteriyor; EMGLab'a özgü doğruluk ayrı raporlanmıyor. Pencere özniteliklerinin test birimine dönüşümü de tam açık değil."
+11;11_2024_Ouamri.pdf;2024;Sarra Ouamri;ALS Disease Detection in EMG using a Polynomial Compact Support Kernel-based Time-Frequency Distribution and CNN;"EMGLab (alt küme: biceps brachii, 105 kayıt; 6 sağlıklıdan 55, 6 ALS hastasından 50)";ALS–sağlıklı;"pencere (1024 örnek, %80 örtüşme; zaman-frekans görüntüsü)";"14968 pencere görüntüsü rastgele %75 eğitim/%25 test olarak ayrılıyor. Eğitim kümesinde 10 katlı çapraz doğrulama yapılıyor; ayrılan test kümesi üzerinde 10 denemenin ortalaması raporlanıyor.";S;;"The values kept in this work for the window length and 
+overlap percentages are 1024 and 80%, respectively. || The constructed datasets contain 14968 2D RGB image s, 
+7678 of them correspond to healthy cases while the 
+remaining 7290 images correspond to ALS cases. || As in experiment 1, the entire 
+EMG data is randomly split into a training set and a test set 
+with the same sample sizes. || and 98.9 % for average test accuracy.";"§III.B Windowing; §IV Experimental Results and Discussions, özellikle §IV.B Experiment 2";98.9;3;"Açıkça test doğruluğu verilen Deney 2 kodlandı. Deney 1 ve Tablo V'teki daha yüksek %99.02, %25 doğrulama kümesinin sonucudur; ayrı test sonucu olarak alınmadı. Kişi/kayıt bazında gruplama belirtilmiyor. Genel veri tanıtımında ALS kişi sayısı 7 yazılmış; kullanılan alt küme açıkça 6 ALS + 6 sağlıklı kişidir."
+12;12_2021_Hao.pdf;2021;Chenxu Hao;Omics feature learning for cross individual ALS disease identification with EMG signal;"EMGLab (alt küme: biceps brachii; 90 ALS + 90 sağlıklı kayıt, makalede 'Subjects' olarak adlandırılıyor)";ALS–sağlıklı;"pencere (6000 nokta, 3000 nokta adım); sonuçlar 'subject' denen kayıt düzeyinde birleştiriliyor";Bireylerin rastgele eğitim/teste ayrıldığı iddia ediliyor. 9:1 eğitim/doğrulama oranıyla 10 katlı çapraz doğrulama 10 kez uygulanıyor. EMGLab'daki 180 kayıt, 180 birey olarak sayılıyor.;P*;celiski;"this paper constructs the training data with the individual as the
+unit. A certain number of individuals are randomly selected to
+form the training set, and the rest of the individuals are used
+as the test set, i.e., cross-individual classiﬁcation. || Dataset1 Class Subjects Samples
+ALS 90 5028
+NOR 90 5344 || Speciﬁcally, the experiment is 10-fold
+cross-validation for 10 times in which the training set and
+the validation set are 9:1. || 1 94.67% 95.17%";"s. 2701, §II.A–B ve Tablo I; s. 2702, §III; s. 2703–2704, Tablo III–IV";95.17;3;"EMGLab deneyindeki en yüksek sonuç, 35 öznitelikli sadeleştirilmiş kümenin Acc_subject değeridir. Tablo I'in 90 ALS + 90 NOR 'Subjects' sayısı, EMGLab'daki 8 ALS + 10 sağlıklı kişiyle çelişiyor; kayıtların ayrılması kişi ayrımını sağlamaz. Özel veri kümesindeki %96.82 kullanılmadı."
+13;13_2016_Mishra.pdf;2016;Vipin K Mishra;Classification of normal, ALS, and myopathy EMG signals using ELM classifier;EMGLab N2001 (kullanılan kayıt/segment sayıları belirtilmemiş);3 sınıf (ALS–miyopati–sağlıklı);belirsiz (kayıt mı segment mi açıklanmıyor);"Beş öznitelik ELM'ye birlikte veriliyor ve 10 katlı çapraz doğrulama kullanılıyor. Katlara dağıtılan örneğin kayıt, segment ya da kişi olduğu; eğitim/test sayıları ve gruplama açıklanmıyor.";U;;"Signals 
+were collected using concentric needle electrode for the 
+duration of 11.2 seconds. || X is the Fourier transform of x and the signal is divided into N 
+segments. || Ten-fold 
+cross validation method has been used to find the 
+classification Result. || Three class classification accuracy achieved using 
+ELM classifier 88%.";"§II.A Dataset; §II.B Feature Extraction, Denklem (1); §III Result and Discussion, Tablo 1–2";88;1;"11.2 saniyelik kayıtlar tarif ediliyor; bispektrum hesabında sinyalin N segmente ayrıldığı belirtiliyor, ancak bu segmentlerin ayrı sınıflandırma örnekleri olup olmadığı söylenmiyor. Bu nedenle R/S ayrımı yapılamadı. Raporlanan %88 aynen alındı; Tablo 2'nin köşegen toplamı 220/320=%68.75 olduğundan doğrulukla uyuşmuyor. Miyopati kişi sayısı da metinde 6 olarak verilmiş."
+14;14_2013_Kucuk.pdf;2013;Hanife Kucuk;Classification of EMG signals by k-Nearest Neighbor algorithm and Support vector machine methods;"EMGLab (alt küme: 371 kayıt; 10 sağlıklı + 7 ALS kişisi; biceps brachii ve vastus medialis)";ALS–sağlıklı;kayıt (kayıttaki MÜAP özniteliklerinin ortalaması ve standart sapması);"Her EMG kaydındaki MÜAP öznitelikleri kayıt düzeyinde özetleniyor. Veri rastgele 10 gruba ayrılıyor; dokuz grupla eğitim, dışarıda bırakılan grupla test yapılıyor. Kişi bazında gruplama belirtilmiyor.";R;;"Bu çal ışmada her bir 
+EMG verisine ait MÜAP’ lar ın öznitelikleri 
+hesaplandıktan sonra ortalamalar ı ve standart sapma 
+değerleri sınıflandırıcıya giriş olarak verilmiştir. || Çapraz 
+geçerlilik yönteminde veri seti rastgele olarak “K” gruba 
+ayrılmıştır. Bu gruplardan biri d ışarıda bırakılarak geriye 
+kalan k ısım ile model olu şturulmuştur. Olu şturulan 
+modelin s ınıflama performans ı d ışarıda b ırakılan veriler 
+üzerinde test edilmi ştir. S ırasıyla bu i şlem dönü şümlü 
+olarak di ğer “K” grup için de tekrarlanm ıştır.  Bu 
+çalışmada K de ğeri 10 seçilmi ştir. || k-EYK algoritmas ı k=5 için, % 97.97 
+doğrulukla s ınıflandırmış ve en yüksek ba şarım ED 
+(Etkin değer) öznitelik vektörü ile sa ğlanmıştır.";"§II.A Veri Edinme ve Önişlem; §II.D Öznitelik vektörlerinin çıkarılması; §IV Deneysel Sonuçlar ve Şekil 2";97.97;3;En yüksek sonuç k-EYK, k=5 ve etkin değer (ED) özniteliğidir. MÜAP'lar bölütlenmesine rağmen sınıflandırıcıya her kayıt için ortalama/standart sapma verildiğinden örnek birimi MÜAP değil kayıttır. 17 kişiden 371 kayıt kullanılması kişi-ayrık test anlamına gelmez.
+15;15_2023_Cherifi.pdf;2023;Dalila Cherifi;Automated Diagnosis of Neuromuscular Disorders using EMG Signals;"EMGLab N2001 (25 kişi; kullanılan kayıt sayısı belirtilmemiş)";3 sınıf (ALS–miyopati–sağlıklı);kayıt (her EMG sinyalinin dalgacık bantlarından özet öznitelikler);Her EMG sinyali öznitelik uzayında temsil edilerek sınıflandırılıyor. 10 katlı çapraz doğrulamada dokuz alt küme eğitim, biri test için kullanılıyor. Kişiye göre gruplama veya katların kişi dağılımı belirtilmiyor.;R;;"Both time and 
+time-frequency domain features are used to represent each 
+EMG signal in the feature space || The trained model will 
+be able to diagnose a patient as being healthy, neuropathic or 
+myopathic based on their EMG recording. || Then we cross validated the models using 10 folds. Cross 
+validation (CV) is commonly employed to compare multiple 
+ensemble learning models and determine th e optimal model 
+for a given problem. In n -fold CV, the available data is 
+divided into n distinct subsets, with their union forming the 
+original set. Each learning model is trained using n-1 subsets, 
+and then evaluated on a separate subset that was not used for 
+training. || testing accuracy of 78.35% when using DWT 
+without preprocessing at level 9 with the linear SVM classifier.";"§III.b–c; §IV.A, §IV.C–D; §IV.E.c Experiment 3; Özet";78.35;1;"En yüksek test sonucu Deney 3'te ön işleme olmadan DWT seviye 9 ve doğrusal SVM ile elde edilmiş. Sinyal başına bant istatistiklerinden R çıkarıldı; bir kayıttan bağımsız sınıflandırma pencereleri üretildiği anlatılmıyor. Kayıt/eğitim/test sayıları verilmediğinden birim yorumu sınırlı kesinlikte. %100 değerleri eğitim doğruluğudur."
+16;16_2020_Achmamad.pdf;2020;Abdelouahad Achmamad;Automatic amyotrophic lateral sclerosis detection using tunable Q-factor wavelet transform;EMGLab (alt küme: 200 ALS + 200 sağlıklı kayıt);ALS–sağlıklı;"segment (35000 örnek; kayıt başına 6 segment)";"400 kayıt, her birinden 6 parça alınarak 2400 segmente dönüştürülüyor. Veri rastgele 10 eşit kata ayrılıyor; dokuz katla eğitim, bir katla test ve kat ortalaması kullanılıyor. Kayıt/kişi gruplaması belirtilmiyor.";S;;"In this study, 200 healthy and 200 ALS EMG signals were investigated for 
+neuromuscular disorder detection. For data increasing, we divided each EMG record into six segments with 
+35,000 samples, leading to 1,200 records for each clas s. || Traditionally, the k -fold cross -validation technique 
+randomly splits the dataset into k-fold equal sizes to further train on 𝑘 − 1 folds and evaluates on one fold. In 
+this way, we repeat this k times for each fold. || In this study, k=10 was selected and the average accuracy for 
+all validation is expressed by [15]: || 96.33 ± 0.83%";"s. 746, §2.1; s. 751–753, §4 ve Tablo 4";96.33;3;"En yüksek test/çapraz doğrulama ortalaması k-NN k=3, TQWT Q=1, j=10, r=3 ve ilk 10 seçilmiş öznitelikle %96.33±0.83. Bölütlemeden sonra 'records' denilen 1200 örnek/sınıf aslında segmenttir; başlangıçtaki 200 kayıt/sınıf ile karıştırılmadı."
+17;17_2018_Hazarika.pdf;2018;Anil Hazarika;F-SVD based algorithm for variability and stability measurement of bio-signals, feature extraction and fusion for patter;"EMGLab (alt küme: 250 kayıt havuzu; 50 ALS + 50 miyopati + 150 sağlıklı, ikili deneyler ayrıca alt kümelerde)";ALS–sağlıklı;"kayıt (çoklu çerçevelerin füzyonundan global öznitelik; Type-III çoklu gözlem içeriyor)";"Tüm veri rastgele eğitim ve test kümelerine ayrılıyor; aynı veri/öznitelik vektörünün iki aşamada tekrarlanmadığı belirtiliyor. Bölme tekrarlanıp performans ortalaması raporlanıyor. EMGLab için oran ve kişi bazında gruplama verilmemiş.";R;;"In validation stage entire data set is randomly partitioned to
+training and the testing data set. It is also ensured that same data
+or features vectors are not repeated in both the phases. || The aforementioned process of forming
+train and test data set has been repeated and the average perfor-
+mance metrics are reported in this article. || In essence, DMI and DMII
+map multiple signal views to matrices that indicate the compact
+distribution of information spaces. This implies that it carries global
+information of the signal to be extracted by the features. || Type
+ − III KNN ALS vs. Nor 99.65 96.65 98.10";"s. 27–28, §2; s. 33–34, §4–5 ve Tablo 3; s. 35–38, §6 ve Tablo 5";98.10;1;"EMGLab için en yüksek sonuç Type-III ve k-NN k=5 ile ALS–sağlıklı deneyidir. %100 ve %50/%50 bölme ayrı GNRC verisine aittir. Kayıt sayıları ve global sinyal öznitelikleri R yorumunu destekliyor; Type-III'ün çoklu gözlemlerinin kayıtlara eşlenmesi ve test sayıları açık değil. Aynı vektörün tekrarlanmaması kişi ayrımı iddiası olarak alınmadı. §6'daki '10 additional' ALS kayıtlarının kullanımı belirsiz."
+18;18_2020_Chandra.pdf;2020;Pranabendra Prasad Chandra;Neuromuscular Disease Detection Employing 1D-Local Binary Pattern of Electromyography Signals;EMGLab N2001 (alt küme: sınıf başına 2500 segment);ALS–sağlıklı (ayrıca miyopati–sağlıklı);segment;Her kayıt 4096 örnekli 64 segmente ayrılmış, 31–55. segmentler kullanılmıştır. Sınıf başına 2500 segmentin LBP özniteliklerine 10 katlı çapraz doğrulama uygulanmıştır. Kişiye veya kayda göre gruplama belirtilmemiştir.;S;;each signal was partitioned into 64 segments, with each fragment containing 4096 data points. Out of these 64 segments, the 25 middle steady regions (ranging from 31 st to 55 th segment) were used for signal analysis as reported in [18]. [...] To overcome the issue of overfitting and at the same time to improve the reliability of the classifier’s performance in this study, a 10- fold cross-validation method was also adopted.;"s. 273, II. Data Acquisition; s. 275, IV.B ve Tablo II";97.25;3;En yüksek doğruluk: uniform 1D-LBP + SVM ile ALS–sağlıklı, %97.25 ± 1.25. Segment birimi ve 10 katlı çapraz doğrulama için yönergedeki S kuralı uygulanmıştır.
+19;19_2019_Kucuk.pdf;2019;Hanife Küçük;Nöromüsküler hastalıkların yapay zeka yöntemleri ile sınıflandırılması;EMGLab N2001 (alt küme: 230 ALS, 230 miyopati, 230 sağlıklı kayıt);ALS–sağlıklı (ayrıca ALS–miyopati ve miyopati–sağlıklı);kayıt (MUAP öznitelikleri kayıt düzeyinde özetlenmiş);25 kişiden alınan 3×230 EMG verisi rastgele 10 gruba ayrılmıştır. Bir grup test, kalan gruplar eğitim için dönüşümlü kullanılmıştır. Kişilerin gruplara ayrıldığı belirtilmemiştir.;R;;"Her bir veri grubunda; 8 sn süren 230’ar tane EMG verisi bulunmaktadır. Bu verilerin 1 sn’lik kısmında tepe değeri 50uV aşan ortalama 36 adet MUAP yer almaktadır. Bölütleme aşamasında ise toplam 198600 MUAP elde edilmiştir. [...] Sınıflandırıcı başarımını belirlemek için çapraz geçerlilik yöntemi ile toplam 3x230 tane veri seti rastgele olarak “k” gruba ayrılmıştır. Bu yöntemde gruplardan biri dışarıda bırakılarak geriye kalan kısım ile ağ eğitilmiştir. Oluşturulan ağın sınıflandırma başarımı dışarıda bırakılan veriler üzerinden test edilmiştir. Sırasıyla bu işlem dönüşümlü olarak diğer “k” grup için de tekrarlanmıştır. Bu çalışmada k değeri 10 seçilmiştir.";"s. 1729, Bölüm 2.1; s. 1733, Bölüm 3; s. 1735–1736, Bölüm 4; s. 1739, Tablo 5";98.91;3;MUAP bölütlemesi yapılmasına rağmen çapraz doğrulamaya giren sayı 198600 MUAP değil 690 kayıttır. En yüksek bildirilen çapraz doğrulama medyanı ALS–sağlıklı için %98.91'dir (s. 1736, IEMG+SGS+WAMP+MF). Aynı deneyin Tablo 5'teki toplam doğruluğu %97.39'dur (DVM-RTF).
+20;20_2022_Wang.pdf;2022;Xujian Wang;Selective ensemble learning for cross-muscle ALS disease identification with EMG signal;EMGLab N2001 (Dataset_A: biceps brachii, 90 ALS ve 90 sağlıklı kayıt);ALS–sağlıklı;pencere (sonuçlar 'individual' denilen kayıtlar için birleştirilmiş);"6000 noktalı, 3000 adımlı pencereler sınıflandırılmış; pencere tahminlerinden 'individual' sonucu üretilmiştir. 10 katlı çapraz doğrulama 'cross-individual' olarak sunulmuş, ancak Dataset_A'da her sınıf için 90 'individual' sayılmıştır.";P*;celiski;Muscle Age Individuals Samples Age Individuals Samples Dataset_A BBM 35-67 90 5028 21-37 90 5344 [...] In the following experiments, 10-fold cross validation is carried out to verify the performance of the proposed method. [...] TABLE II, TABLE III and TABLE IV reports the clas- siﬁcation performance of ensemble learning structure based on selective ensemble voting strategy vs basic classiﬁers in cross-individual experiments.;"s. 3188, II.A; s. 3189, Tablo I; s. 3190, III ve Tablo IV; s. 3191, Tablo VII";93.70;3;"EMGLab'da 8 ALS ve 10 sağlıklı kişi vardır; Tablo I'in 90+90 'Individuals' sayısı kişi sayısıyla çelişir. En yüksek EMGLab deneyi (BBM/Dataset_A, seçici topluluk ve LDA, %93.70) kodlanmıştır. Dataset_B/C hastane verisindeki daha yüksek sonuçlar bu koda dahil edilmemiştir."
+21;21_2016_Kucuk.pdf;2016;Hanife Küçük;Neuromuscular disease diagnosis of SVM, K-NN and DA algorithm based classification part-I;"EMGLab N2001 (alt küme: sınıf başına 230 kayıt; 10 sağlıklı, 7 miyopati, 8 ALS kişisi)";ALS, miyopati ve sağlıklı EMG'lerinin ön işlenmesi ve MUAP kümelemesi;"MUAP (kümeleme birimi; hastalık sınıflandırma birimi bildirilmemiş)";"Bölüm-I yalnızca ön işleme, bölütleme ve kümelemeyi anlatmaktadır. Eğitim/test ayrımı veya çapraz doğrulama verilmemiş; sonraki sınıflandırma çalışması Bölüm-II'ye bırakılmıştır.";U;;This study includes a classification structure consisting of first three stages for the automatic diagnosis of the neuromuscular disease of ALS (Amyotrophic Lateral Sclerosis) and myopathy being a muscular disease. [...] In the clustering stage, a hybrid structure is used to optimize the number of clusters. MUAP 's clustering will allow transactions to be made with small data sets in the next second section.;"s. 150, Abstract; s. 152–153, III. Tartışma";bildirilmemiş;3;Tam metinde hastalık sınıflandırma deneyi, eğitim/test bölmesi veya test doğruluğu yoktur. 198600 MUAP, bölütleme çıktısıdır. Bölüm-II veya başka bir yayındaki sonuçlar bu satıra aktarılmamıştır. Türkçe metindeki bozuk ı karakterleri karar için gerekli İngilizce özeti etkilememektedir.
+22;22_2023_Rahman.pdf;2023;Minhajur Rahman;ResEMGNet: A Lightweight Residual Deep Learning Architecture for Neuromuscular Disorder Detection from Raw EMG Signals;EMGLab N2001;ALS–sağlıklı (ayrıca 3 sınıf: ALS, miyopati, sağlıklı);pencere (23437 nokta, 2000 noktaya alt örnekleme);"Subject-independent sonuç iddiası vardır. 23437 noktalı pencerelerden eğitim/doğrulama/test için 3215/682/539 örnek bildirilmiştir; kişilerin kümelere atanması anlatılmamıştır. En yüksek doğruluklu iki sınıflı deneyin ayrı bölme bilgisi verilmemiştir.";P*;dogrulanamaz;In this paper, we propose ResEMGNet, a subject-independent deep-learning architecture capable of identifying ALS and Myopathy among three classes ( Myopathy, Normal, and ALS) utilizing the raw EMG data. [...] the training data now had a shape of (3215, 2000, 1), the val- idation data was represented as (682, 2000, 1), and the test data took on the form of (539, 2000, 1). [...] In two-class tasks, our model excelled with accuracy, sensitivity, and speciﬁcity values reaching 98.84%, 98.54%, and 99.34%, re- spectively, outperforming all existing models in normal-A LS detection.;"Abstract; Bölüm 1; Bölüm 2 Dataset Preprocessing; Bölüm 6 ve Tablo 2";98.84;3;"En yüksek EMGLab sonucu iki sınıflı ALS–sağlıklı deneyidir (%98.84). Üç sınıflı testte 509/539 doğru (%94.43) bildirilmiştir. Kişi kimlikleri, küme başına kişi sayıları ve kişiye göre ayırma işlemi yoktur; pencere sayıları tek başına kişi ayrıklığını doğrulamaz. 294 başlangıç eğitim kaydından 3215 pencereye geçişin ayrıntısı da açıklanmamıştır."
+23;23_2024_Boutellaa.pdf;2024;Elhocine Boutellaa;On Neuromuscular Disease Detection from Electromyograms using Convolutional and Recurrent Neural Networks;EMGLab N2001 (alt küme: biceps brachii kayıtları);ALS–miyopati (ayrıca 3 sınıf ve diğer ikili karşılaştırmalar);segment (10000 nokta, 1000 nokta örtüşme);Kayıtlara gürültü ekleme, normalleştirme ve örtüşen segmentleme sonrası oluşan veri kümesi eğitim/doğrulama/test olarak ayrılmıştır. Ayrımın rastgeleliği, oranları, örnek sayıları ve kişi/kayıt gruplaması açıklanmamıştır.;U;;Next, we segmented the normalized EMG recordings into overlapping segments of equal sizes. Besides reducing the size of the model’s input, and thus reducing its complexity, the segmentation operation also contributes to increasing the size of the data. After segmentation, we normalized each resulting segment into a zero-mean and unit-variance. By the end, we splitted the obtained dataset into train, validation and test subsets. [...] The EMG segment size is set to 10000 with an overlap of 1000.;"Bölüm II.A Electromyogram Signals; III.A Experimental Setup; III.D Bi-Class Analysis ve Tablo II";99.83;1;En yüksek EMGLab doğruluğu CONV-LSTM ile ALS (neuropathy)–miyopati deneyindedir (%99.83). Segmentleme sonrası bölme anlatımı S'yi düşündürse de rastgele dağıtım veya çapraz doğrulama belirtilmemiştir. Kayda/kişiye göre gruplama yapılıp yapılmadığı da bilinmediğinden tahmin yürütmeden U verildi.
+24;24_2023_Putro.txt (yalnizca txt);2023;Nur Achmad Sulistyo Putro;Revisiting the K-Fold Approach for a Stable Model on Amyotrophic Lateral Sclerosis Prediction Scheme using LSTM and Attention;EMGLab N2001 (alt küme: 151 ALS + 151 sağlıklı kayıt, toplam 3322 segment);ALS–sağlıklı;"segment (1 saniye; kayıt başına 11)";"302 kayıt 11'er segmente ayrılmıştır. Eğitim/test ve eğitim içi doğrulama ayrımının farklı kişilerden oluştuğu iddia edilmiştir; 3 ve 5 katlı doğrulama uygulanmıştır. En yüksek doğruluklu dikkat mekanizmalı modelin test kümesi 665 segmenttir.";P*;celiski;Then, the 302 EMG signals were segmented into 11 segments, each with a duration of 1 second. Consequently, the dataset size used in this experiment was determined as 302 × 11 = 3322. [...] The training, validation, and test sets were ensured to comprise data from different subjects. [...] Besides, it can predict 655 EMG signal segments out of 665 segments in the test set, as shown in Figure 4.;"Bölüm 2.1 Dataset; 2.3 Evaluation Metrics; 3.2 Results and Comparison with Previous Study, Tablo 1";98.50;3;"Kayıt başına tam 11 segment bildirilmesine rağmen 665 test segmenti 11'in katı değildir (665=60×11+5). Bu, farklı kişilerden oluşan kümeler iddiasıyla çelişir. En yüksek test doğruluğu 655/665=%98.50'dir; %98.45 dengeli doğruluktur. Sağlanan TXT bazı giriş/mimari/formül kısımları kısaltılmış yayıncı metnidir."
+25;25_2021_Castillo.pdf;2021;Jonathan Roberto Torres Castillo;Neuromuscular disorders detection through time-frequency analysis and classification of multi-muscular EMG signals using;"EMGLab N2001 (tam kullanılabilir veri: 938 kayıt; 323 ALS, 315 miyopati, 300 sağlıklı)";3 sınıf: ALS, miyopati, sağlıklı;"segment (kayıt başına 10); son karar kayıt içi çoğunluk oyu";"Öznitelik seçimi için kişilerin %70'inin tüm kayıtlarıyla eğitim, kalanıyla test anlatılmıştır. Performans değerlendirmesinde 9380 segment üzerinde 3 katlı çapraz doğrulama 10 kez tekrarlanmış; eğitim/test büyüklükleri 6254/3126, devamında 6253/3127 verilmiştir.";P*;celiski;Take a homogeneous and random sample of 70 % of subjects in the preprocessed database for each NMD and then take all the signals from the subjects to form the training data set, and the remainder is left for the test set. [...] All the signals of both training and validation subsets were divided into ten segments to form a training dataset MT with 6254 (the number of signals multiplied by the number of windows, multiplied by two- thirds of sets for cross-validation = 938× 10× 2/3), and a validation dataset MV with 3126 entries (938× 10× 1/3). [...] Remembering that each signal was divided into ten segments, for 9380 signal segments of information divided into three parts at each test, each segment was individually classified.;"s. 7, Bölüm 2.4.3 ve 2.6; s. 10–12, Bölüm 3; s. 1, Abstract; s. 13, Tablo 6";99.5;3;"Kişilerin tüm kayıtlarını birlikte ayırma anlatımıyla, kayıt başına 10 segmentten oluşamayan 3126/3127 test segmenti sayıları çelişmektedir. Kayıt içi çoğunluk oyu 'subject' sınıflaması diye sunulmuştur; gerçek kişi sayısı 25'tir. En yüksek bildirilen EEMD+KNN doğruluğu özette %99.5; ana metin, sonuç ve Tablo 6'da %99.4'tür. Segment doğruluğu %94.4'tür. En yüksek sonuçlu, çoğunluk oylu deney kodlanmıştır."

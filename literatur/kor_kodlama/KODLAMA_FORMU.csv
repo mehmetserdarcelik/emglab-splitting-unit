@@ -1,0 +1,26 @@
+﻿no;dosya;yil;ilk_yazar;baslik;veri;gorev;ornek_birimi;bolme_tarifi;bolme_kodu;pstar_turu;kanit_alinti;sayfa_bolum;dogruluk;emin_misiniz;not
+1;01_2022_Hassan.pdf;2022;Kanza Hassan;ALSNet: A Dilated 1-D CNN for Identifying ALS from Raw EMG Signal;;;;;;;;;;;
+2;02_2026_Chowdhury.txt (yalnizca txt);2026;Sandipa Chowdhury;ALSGate: An Efficient Gated Mixture‐of‐Experts Model for Reliable ALS Detection Using EMG Signals;;;;;;;;;;;
+3;03_2022_Samanta.pdf;2022;Kaniska Samanta;Neuromuscular disease detection based on feature extraction from time–frequency images of EMG signals employing robust h;;;;;;;;;;;
+4;04_2012_Fattah.pdf;2012;Shaikh Anowarul Fattah;Evaluation of Different Time and Frequency Domain Features of Motor Neuron and Musculoskeletal Diseases;;;;;;;;;;;
+5;05_2023_Rahman.pdf;2023;Md. Toufiqur Rahman;EMG Signal Classification for Neuromuscular Disorders with Attention-Enhanced CNN;;;;;;;;;;;
+6;06_2023_Afzal.pdf;2023;Faiza Afzal;Power of Cepstrum meets EMG: Detecting ALS and Myopathy;;;;;;;;;;;
+7;07_2022_Abdel-Maboud.pdf;2022;Nahla F. Abdel-Maboud;Comparative study of machine learning techniques based on TQWT for EMG signal classification;;;;;;;;;;;
+8;08_2014_Doulah.pdf;2014;Abul Doulah;Wavelet Domain Feature Extraction Scheme Based on Dominant Motor Unit Action Potential of EMG Signal for Neuromuscular D;;;;;;;;;;;
+9;09_2026_Ahmadi.pdf;2026;Amir Masoud Ahmadi;Enhancing ALS diagnosis using EMG time series classification through integrating MiniRocket, InceptionTime, and LightGBM;;;;;;;;;;;
+10;10_2018_Hazarika.pdf;2018;Anil Hazarika;An automatic feature extraction and fusion model: application to electromyogram (EMG) signal classification;;;;;;;;;;;
+11;11_2024_Ouamri.pdf;2024;Sarra Ouamri;ALS Disease Detection in EMG using a Polynomial Compact Support Kernel-based Time-Frequency Distribution and CNN;;;;;;;;;;;
+12;12_2021_Hao.pdf;2021;Chenxu Hao;Omics feature learning for cross individual ALS disease identification with EMG signal;;;;;;;;;;;
+13;13_2016_Mishra.pdf;2016;Vipin K Mishra;Classification of normal, ALS, and myopathy EMG signals using ELM classifier;;;;;;;;;;;
+14;14_2013_Kucuk.pdf;2013;Hanife Kucuk;Classification of EMG signals by k-Nearest Neighbor algorithm and Support vector machine methods;;;;;;;;;;;
+15;15_2023_Cherifi.pdf;2023;Dalila Cherifi;Automated Diagnosis of Neuromuscular Disorders using EMG Signals;;;;;;;;;;;
+16;16_2020_Achmamad.pdf;2020;Abdelouahad Achmamad;Automatic amyotrophic lateral sclerosis detection using tunable Q-factor wavelet transform;;;;;;;;;;;
+17;17_2018_Hazarika.pdf;2018;Anil Hazarika;F-SVD based algorithm for variability and stability measurement of bio-signals, feature extraction and fusion for patter;;;;;;;;;;;
+18;18_2020_Chandra.pdf;2020;Pranabendra Prasad Chandra;Neuromuscular Disease Detection Employing 1D-Local Binary Pattern of Electromyography Signals;;;;;;;;;;;
+19;19_2019_Kucuk.pdf;2019;Hanife Küçük;Nöromüsküler hastalıkların yapay zeka yöntemleri ile sınıflandırılması;;;;;;;;;;;
+20;20_2022_Wang.pdf;2022;Xujian Wang;Selective ensemble learning for cross-muscle ALS disease identification with EMG signal;;;;;;;;;;;
+21;21_2016_Kucuk.pdf;2016;Hanife Küçük;Neuromuscular disease diagnosis of SVM, K-NN and DA algorithm based classification part-I;;;;;;;;;;;
+22;22_2023_Rahman.pdf;2023;Minhajur Rahman;ResEMGNet: A Lightweight Residual Deep Learning Architecture for Neuromuscular Disorder Detection from Raw EMG Signals;;;;;;;;;;;
+23;23_2024_Boutellaa.pdf;2024;Elhocine Boutellaa;On Neuromuscular Disease Detection from Electromyograms using Convolutional and Recurrent Neural Networks;;;;;;;;;;;
+24;24_2023_Putro.txt (yalnizca txt);2023;Nur Achmad Sulistyo Putro;Revisiting the K-Fold Approach for a Stable Model on Amyotrophic Lateral Sclerosis Prediction Scheme using LSTM and Attention;;;;;;;;;;;
+25;25_2021_Castillo.pdf;2021;Jonathan Roberto Torres Castillo;Neuromuscular disorders detection through time-frequency analysis and classification of multi-muscular EMG signals using;;;;;;;;;;;

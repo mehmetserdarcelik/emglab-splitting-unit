@@ -1,0 +1,13 @@
+klasik ALS-Saglikli DVM-RTF tamam
+klasik ALS-Saglikli K-EYK(K=1) tamam
+klasik ALS-Saglikli DDA tamam
+klasik ALS-Miyopati DVM-RTF tamam
+klasik ALS-Miyopati K-EYK(K=1) tamam
+klasik ALS-Miyopati DDA tamam
+klasik Miyopati-Saglikli DVM-RTF tamam
+klasik Miyopati-Saglikli K-EYK(K=1) tamam
+klasik Miyopati-Saglikli DDA tamam
+klasik 3-sinif DVM-RTF tamam
+klasik 3-sinif K-EYK(K=1) tamam
+klasik 3-sinif DDA tamam
+bitti

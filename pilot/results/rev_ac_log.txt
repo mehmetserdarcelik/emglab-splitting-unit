@@ -1,0 +1,16 @@
+BB ALS-Saglikli DVM-RTF tamam
+BB ALS-Saglikli K-EYK(K=1) tamam
+BB ALS-Saglikli DDA tamam
+BB ALS-Miyopati DVM-RTF tamam
+BB ALS-Miyopati K-EYK(K=1) tamam
+BB ALS-Miyopati DDA tamam
+BB Miyopati-Saglikli DVM-RTF tamam
+BB Miyopati-Saglikli K-EYK(K=1) tamam
+BB Miyopati-Saglikli DDA tamam
+BB 3-sinif DVM-RTF tamam
+BB 3-sinif K-EYK(K=1) tamam
+BB 3-sinif DDA tamam
+BB cnn pencere_rastgele 0.9694
+BB cnn kayit_grup 0.8879
+BB cnn hasta_grup 0.837
+bitti

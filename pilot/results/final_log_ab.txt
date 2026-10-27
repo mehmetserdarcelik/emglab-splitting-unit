@@ -1,0 +1,12 @@
+alsnet 0 hasta_LOSO pencere dogruluk 0.8989
+cnn3sinif 0 pencere_rastgele pencere dogruluk 0.9646
+cnn3sinif 0 kayit_grup pencere dogruluk 0.9033
+cnn3sinif 0 hasta_grup pencere dogruluk 0.8365
+cnn3sinif 0 hasta_LOSO pencere dogruluk 0.8464
+cnn3sinif 1 pencere_rastgele pencere dogruluk 0.964
+cnn3sinif 1 kayit_grup pencere dogruluk 0.9
+cnn3sinif 1 hasta_grup pencere dogruluk 0.8505
+cnn3sinif 2 pencere_rastgele pencere dogruluk 0.9636
+cnn3sinif 2 kayit_grup pencere dogruluk 0.8939
+cnn3sinif 2 hasta_grup pencere dogruluk 0.8507
+bitti
