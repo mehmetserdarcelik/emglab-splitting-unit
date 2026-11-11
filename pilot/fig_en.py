@@ -28,6 +28,10 @@ NAMES = {"sekil_bolme_dogruluk": "fig1_literature", "sekil2_bolme_duzeyi": "fig2
          "sekil_marj": "figS1a_match_margin", "sekil_ornek": "figS1b_match_example"}
 
 RELAYOUT = {"sekil_bolme_dogruluk", "sekil_marj", "sekil_ornek"}
+NO_TITLE = {"sekil_bolme_dogruluk", "sekil2_bolme_duzeyi", "sekil3_hasta_basina", "sekil4_model_siralamasi"}
+TITLE_STARTS = ("EMGLab N2001 literature:", "n: number of coded studies", "Same data and model:", "EMGLab N2001; 5-fold",
+                "Participant-disjoint evaluation (LOSO):", "Each dot is one participant", "Leaky evaluation changes",
+                "Classical window features; 5-fold")
 
 # Sira onemli: uzun ifadeler once
 TR_EN = [
@@ -122,14 +126,26 @@ def savefig_en(self, fname, *a, **k):
     for t in self.findobj(Text):
         s = t.get_text()
         if s:
-            t.set_text(tr2en(s))
+            s = tr2en(s)
+            # Dergi kurali: baslik ve aciklama sekil uzerinde degil, sekil yazisinda olur (ana metin sekilleri)
+            t.set_text("" if p.stem in NO_TITLE and s.startswith(TITLE_STARTS) else s)
     if p.stem in RELAYOUT:  # duz tight_layout kullanan sekiller: Ingilizce metne gore yeniden yerlestir
         self.tight_layout()
     self.canvas.draw()
     left = [t.get_text() for t in self.findobj(Text) if re.search("[ğüşıöçĞÜŞİÖÇ]", t.get_text())]
     if left:
         print("CEVRILMEMIS:", p.stem, left)
-    return _orig(self, OUT / f"{NAMES[p.stem]}{p.suffix}", *a, **k)
+    target = OUT / f"{NAMES[p.stem]}{p.suffix}"
+    res = _orig(self, target, *a, **k)
+    if p.stem in NO_TITLE and p.suffix == ".png":  # baslik kalkinca kalan bos kenari kirp
+        from PIL import Image, ImageChops
+        im = Image.open(target).convert("RGB")
+        box = ImageChops.difference(im, Image.new("RGB", im.size, im.getpixel((2, 2)))).getbbox()
+        if box:
+            pad = 30
+            im.crop((max(0, box[0] - pad), max(0, box[1] - pad), min(im.width, box[2] + pad), min(im.height, box[3] + pad))) \
+              .save(target, dpi=(300, 300))
+    return res
 
 
 Figure.savefig = savefig_en

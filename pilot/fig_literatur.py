@@ -65,13 +65,13 @@ def main():
             ax.plot([med, med], [ypos[k] - 0.05, ypos[k] + 0.32], color=INK2, lw=1.5, zorder=2)
 
     # dikkat cekici calismalar
-    notes = {"ALSNet: A Dilated": ("ALSNet 2022", -22), "Revisiting the K-Fold": ("Putro 2023", 22),
-             "ALSGate": ("ALSGate 2026", 0), "Automated Diagnosis of Neuromuscular Disorders using EMG": ("Cherifi 2023", 0)}
-    for key, (lab, dx) in notes.items():
+    notes = {"ALSNet: A Dilated": ("ALSNet 2022", -34, 11), "Revisiting the K-Fold": ("Putro 2023", 4, 23),
+             "ALSGate": ("ALSGate 2026", 40, 11), "Automated Diagnosis of Neuromuscular Disorders using EMG": ("Cherifi 2023", 0, 11)}
+    for key, (lab, dx, dy) in notes.items():
         hit = df[df.baslik.str.contains(key, regex=False)]
         if len(hit):
             r = hit.iloc[0]
-            ax.annotate(lab, (r.acc, ypos[r.bolme_kodu] + 0.12), xytext=(dx, 11), textcoords="offset points",
+            ax.annotate(lab, (r.acc, ypos[r.bolme_kodu] + 0.12), xytext=(dx, dy), textcoords="offset points",
                         ha="center", fontsize=8, color=INK2)
 
     # bizim deneyler: rastgele -> hasta-ayrik oklari
