@@ -102,7 +102,7 @@ def part_c():
 
 
 def part_d():
-    """Tez yapisi (kayit basina 1 vektor, IEMG+SGS+WAMP+MF): tezdeki kayit rastgele 10-kat / hasta grup 5-kat / LOSO."""
+    """Tez yapisi (kayit basina 1 vektor, IEMG+SGS+WAMP+MF): tezdeki kayit rastgele 10-kat / ayni protokol 5-kat / hasta grup 5-kat / LOSO."""
     df = pd.read_csv(RES / "features_records.csv")
     df = df[df.ok].reset_index(drop=True)
     cols = ev.FEATURE_SETS[ev.BEST_SET]
@@ -113,6 +113,7 @@ def part_d():
         for cname in ["DVM-RTF", "K-EYK(K=1)", "DDA"]:
             for seed in SEEDS:
                 P = {"kayit_rastgele_10kat": list(StratifiedKFold(10, shuffle=True, random_state=seed).split(X, y)),
+                     "kayit_rastgele_5kat": list(StratifiedKFold(5, shuffle=True, random_state=seed).split(X, y)),
                      "hasta_grup": list(StratifiedGroupKFold(5, shuffle=True, random_state=seed).split(X, y, s))}
                 if seed == SEEDS[0]:
                     P["hasta_LOSO"] = list(LeaveOneGroupOut().split(X, y, s))
